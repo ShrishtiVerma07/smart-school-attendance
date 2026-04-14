@@ -1,7 +1,7 @@
 import { NavLink, useLocation } from "react-router-dom";
 import {
   LayoutDashboard, Users, GraduationCap, UserCheck, BookOpen,
-  ClipboardCheck, FileText, Building, UserCircle, Settings
+  ClipboardCheck, FileText, Calendar, UserCircle, Settings
 } from "lucide-react";
 
 const navItems = [
@@ -9,10 +9,10 @@ const navItems = [
   { to: "/students", icon: Users, label: "Students" },
   { to: "/teachers", icon: GraduationCap, label: "Teachers" },
   { to: "/parents", icon: UserCheck, label: "Parents" },
-  { to: "/library", icon: BookOpen, label: "Library" },
   { to: "/attendance", icon: ClipboardCheck, label: "Attendance" },
+  { to: "/timetable", icon: Calendar, label: "Timetable" },
+  { to: "/library", icon: BookOpen, label: "Library" },
   { to: "/exams", icon: FileText, label: "Exams" },
-  { to: "/hostel", icon: Building, label: "Hostel" },
   { to: "/account", icon: UserCircle, label: "Account" },
   { to: "/settings", icon: Settings, label: "Settings" },
 ];

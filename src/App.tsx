@@ -8,6 +8,10 @@ import Index from "./pages/Index";
 import Students from "./pages/Students";
 import Teachers from "./pages/Teachers";
 import Attendance from "./pages/Attendance";
+import Parents from "./pages/Parents";
+import Library from "./pages/Library";
+import Timetable from "./pages/Timetable";
+import Exams from "./pages/Exams";
 import PlaceholderPage from "./pages/PlaceholderPage";
 import NotFound from "./pages/NotFound";
 
@@ -25,10 +29,10 @@ const App = () => (
             <Route path="/students" element={<Students />} />
             <Route path="/teachers" element={<Teachers />} />
             <Route path="/attendance" element={<Attendance />} />
-            <Route path="/parents" element={<PlaceholderPage title="Parents" />} />
-            <Route path="/library" element={<PlaceholderPage title="Library" />} />
-            <Route path="/exams" element={<PlaceholderPage title="Exams" />} />
-            <Route path="/hostel" element={<PlaceholderPage title="Hostel" />} />
+            <Route path="/parents" element={<Parents />} />
+            <Route path="/library" element={<Library />} />
+            <Route path="/timetable" element={<Timetable />} />
+            <Route path="/exams" element={<Exams />} />
             <Route path="/account" element={<PlaceholderPage title="Account" />} />
             <Route path="/settings" element={<PlaceholderPage title="Settings" />} />
           </Route>
