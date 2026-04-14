@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import Students from "./pages/Students";
 import Teachers from "./pages/Teachers";
 import Attendance from "./pages/Attendance";
+import NfcTapStation from "./pages/NfcTapStation";
 import Parents from "./pages/Parents";
 import Library from "./pages/Library";
 import Timetable from "./pages/Timetable";
@@ -29,6 +30,7 @@ const App = () => (
             <Route path="/students" element={<Students />} />
             <Route path="/teachers" element={<Teachers />} />
             <Route path="/attendance" element={<Attendance />} />
+            <Route path="/nfc-tap" element={<NfcTapStation />} />
             <Route path="/parents" element={<Parents />} />
             <Route path="/library" element={<Library />} />
             <Route path="/timetable" element={<Timetable />} />
