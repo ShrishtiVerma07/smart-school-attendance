@@ -14,7 +14,83 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      attendance_logs: {
+        Row: {
+          created_at: string
+          date: string
+          id: string
+          method: string
+          status: string
+          student_id: string
+          tap_time: string
+        }
+        Insert: {
+          created_at?: string
+          date?: string
+          id?: string
+          method?: string
+          status?: string
+          student_id: string
+          tap_time?: string
+        }
+        Update: {
+          created_at?: string
+          date?: string
+          id?: string
+          method?: string
+          status?: string
+          student_id?: string
+          tap_time?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "attendance_logs_student_id_fkey"
+            columns: ["student_id"]
+            isOneToOne: false
+            referencedRelation: "students"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
+      students: {
+        Row: {
+          class_section: string
+          created_at: string
+          id: string
+          name: string
+          nfc_card_id: string | null
+          parent_name: string | null
+          parent_phone: string | null
+          photo_url: string | null
+          roll_no: string
+          updated_at: string
+        }
+        Insert: {
+          class_section: string
+          created_at?: string
+          id?: string
+          name: string
+          nfc_card_id?: string | null
+          parent_name?: string | null
+          parent_phone?: string | null
+          photo_url?: string | null
+          roll_no: string
+          updated_at?: string
+        }
+        Update: {
+          class_section?: string
+          created_at?: string
+          id?: string
+          name?: string
+          nfc_card_id?: string | null
+          parent_name?: string | null
+          parent_phone?: string | null
+          photo_url?: string | null
+          roll_no?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
