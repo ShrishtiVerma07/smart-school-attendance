@@ -1,16 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Building, Users, GraduationCap, UserCheck } from "lucide-react";
+import StatCard from "@/components/StatCard";
+import CalendarWidget from "@/components/CalendarWidget";
+import PerformanceChart from "@/components/PerformanceChart";
+import TopScorers from "@/components/TopScorers";
+import ActivityFeed from "@/components/ActivityFeed";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
-  return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+const stats = [
+  { icon: Building, label: "Schools", value: 6000, color: "purple" as const },
+  { icon: Users, label: "Students", value: 24542, color: "yellow" as const },
+  { icon: GraduationCap, label: "Teachers", value: 5000, color: "green" as const },
+  { icon: UserCheck, label: "Parents", value: 10000, color: "blue" as const },
+];
+
+const Index = () => (
+  <div className="space-y-6 animate-fade-in">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      {stats.map((s) => (
+        <StatCard key={s.label} {...s} />
+      ))}
     </div>
-  );
-};
 
-const Index = PlaceholderIndex;
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <CalendarWidget />
+      <PerformanceChart />
+    </div>
+
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <ActivityFeed />
+      <TopScorers />
+    </div>
+  </div>
+);
 
 export default Index;
